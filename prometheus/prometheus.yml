@@ -1,0 +1,34 @@
+# Конфигурация Prometheus
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+alerting:
+  alertmanagers: []
+
+rule_files: []
+
+scrape_configs:
+  # Prometheus self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+  #Сервис filter_service
+  - job_name: 'filter_service'
+    static_configs:
+      - targets: ['filter_service:8000']
+    metrics_path: /metrics
+    scrape_interval: 10s
+
+  # Сервис image-orchestrator
+  - job_name: 'timage-orchestrator'
+    static_configs:
+      - targets: ['image-orchestrator:8001']
+    metrics_path: /metrics
+    scrape_interval: 10s
+
+
+
+
+

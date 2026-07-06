@@ -1,0 +1,10 @@
+include:
+  - docker-compose.storage.yml
+  - docker-compose.kafka.yml
+  - docker-compose.s3.yml
+
+
+networks:
+  IMAIS:
+    name: IMAIS
+    driver: bridge
