@@ -41,6 +41,10 @@ services:
       kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --topic pending --partitions 3 --replication-factor 2
       kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --topic approved --partitions 3 --replication-factor 2
       kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --topic rejected --partitions 3 --replication-factor 1
+      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --topic nsfw --partitions 3 --replication-factor 1
+      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --topic weapon --partitions 3 --replication-factor 1
+      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --topic violence --partitions 3 --replication-factor 1
+      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --topic ml-answer --partitions 3 --replication-factor 1
       echo 'Topics created.'
       "
 
