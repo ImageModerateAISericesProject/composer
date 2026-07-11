@@ -1,7 +1,7 @@
 include:
   - docker-compose.storage.yml
   - docker-compose.kafka.yml
-  - docker-compose.s3.yml
+  - docker-compose.storage.yml
 
 
 networks:
