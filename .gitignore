@@ -1,6 +1,8 @@
 # Docker volumes data (не коммитим)
 # Volumes хранятся в Docker, не в папке
 
+.env
+
 # IDE
 .idea/
 .vscode/
