@@ -36,16 +36,16 @@ services:
       - IMAIS
     entrypoint: ["/bin/sh", "-c"]
     command: |
-      "
-      kafka-topics --bootstrap-server ${KAFKA_BOOTSTRAP_SERVER} --create --if-not-exists --topic ${KAFKA_TOPIC_STATUS_NAME} --partitions ${KAFKA_TOPIC_STATUS_PARTITIONS} --replication-factor ${KAFKA_TOPIC_STATUS_REPLICATION_FACTOR}
-      kafka-topics --bootstrap-server ${KAFKA_BOOTSTRAP_SERVER} --create --if-not-exists --topic ${KAFKA_TOPIC_PENDING_NAME} --partitions ${KAFKA_TOPIC_PENDING_PARTITIONS} --replication-factor ${KAFKA_TOPIC_PENDING_REPLICATION_FACTOR}
-      kafka-topics --bootstrap-server ${KAFKA_BOOTSTRAP_SERVER} --create --if-not-exists --topic ${KAFKA_TOPIC_APPROVED_NAME} --partitions ${KAFKA_TOPIC_APPROVED_PARTITIONS} --replication-factor ${KAFKA_TOPIC_APPROVED_REPLICATION_FACTOR}
-      kafka-topics --bootstrap-server ${KAFKA_BOOTSTRAP_SERVER} --create --if-not-exists --topic ${KAFKA_TOPIC_REJECTED_NAME} --partitions ${KAFKA_TOPIC_REJECTED_PARTITIONS} --replication-factor ${KAFKA_TOPIC_REJECTED_REPLICATION_FACTOR}
-      kafka-topics --bootstrap-server ${KAFKA_BOOTSTRAP_SERVER} --create --if-not-exists --topic ${KAFKA_TOPIC_NSFW_NAME} --partitions ${KAFKA_TOPIC_NSFW_PARTITIONS} --replication-factor ${KAFKA_TOPIC_NSFW_REPLICATION_FACTOR}
-      kafka-topics --bootstrap-server ${KAFKA_BOOTSTRAP_SERVER} --create --if-not-exists --topic ${KAFKA_TOPIC_WEAPON_NAME} --partitions ${KAFKA_TOPIC_WEAPON_PARTITIONS} --replication-factor ${KAFKA_TOPIC_WEAPON_REPLICATION_FACTOR}
-      kafka-topics --bootstrap-server ${KAFKA_BOOTSTRAP_SERVER} --create --if-not-exists --topic ${KAFKA_TOPIC_VIOLENCE_NAME} --partitions ${KAFKA_TOPIC_VIOLENCE_PARTITIONS} --replication-factor ${KAFKA_TOPIC_VIOLENCE_REPLICATION_FACTOR}
-      kafka-topics --bootstrap-server ${KAFKA_BOOTSTRAP_SERVER} --create --if-not-exists --topic ${KAFKA_TOPIC_ML_ANSWER_NAME} --partitions ${KAFKA_TOPIC_ML_ANSWER_PARTITIONS} --replication-factor ${KAFKA_TOPIC_ML_ANSWER_REPLICATION_FACTOR}
-      echo 'Topics created.'
+     "
+      kafka-topics --bootstrap-server ${KAFKA_BOOTSTRAP_SERVER} --create --if-not-exists --topic ${KAFKA_TOPIC_STATUS_NAME} --partitions ${KAFKA_TOPIC_STATUS_PARTITIONS} --replication-factor ${KAFKA_TOPIC_STATUS_REPLICATION_FACTOR};
+      kafka-topics --bootstrap-server ${KAFKA_BOOTSTRAP_SERVER} --create --if-not-exists --topic ${KAFKA_TOPIC_PENDING_NAME} --partitions ${KAFKA_TOPIC_PENDING_PARTITIONS} --replication-factor ${KAFKA_TOPIC_PENDING_REPLICATION_FACTOR};
+      kafka-topics --bootstrap-server ${KAFKA_BOOTSTRAP_SERVER} --create --if-not-exists --topic ${KAFKA_TOPIC_APPROVED_NAME} --partitions ${KAFKA_TOPIC_APPROVED_PARTITIONS} --replication-factor ${KAFKA_TOPIC_APPROVED_REPLICATION_FACTOR};
+      kafka-topics --bootstrap-server ${KAFKA_BOOTSTRAP_SERVER} --create --if-not-exists --topic ${KAFKA_TOPIC_REJECTED_NAME} --partitions ${KAFKA_TOPIC_REJECTED_PARTITIONS} --replication-factor ${KAFKA_TOPIC_REJECTED_REPLICATION_FACTOR};
+      kafka-topics --bootstrap-server ${KAFKA_BOOTSTRAP_SERVER} --create --if-not-exists --topic ${KAFKA_TOPIC_NSFW_NAME} --partitions ${KAFKA_TOPIC_NSFW_PARTITIONS} --replication-factor ${KAFKA_TOPIC_NSFW_REPLICATION_FACTOR};
+      kafka-topics --bootstrap-server ${KAFKA_BOOTSTRAP_SERVER} --create --if-not-exists --topic ${KAFKA_TOPIC_WEAPON_NAME} --partitions ${KAFKA_TOPIC_WEAPON_PARTITIONS} --replication-factor ${KAFKA_TOPIC_WEAPON_REPLICATION_FACTOR};
+      kafka-topics --bootstrap-server ${KAFKA_BOOTSTRAP_SERVER} --create --if-not-exists --topic ${KAFKA_TOPIC_VIOLENCE_NAME} --partitions ${KAFKA_TOPIC_VIOLENCE_PARTITIONS} --replication-factor ${KAFKA_TOPIC_VIOLENCE_REPLICATION_FACTOR};
+      kafka-topics --bootstrap-server ${KAFKA_BOOTSTRAP_SERVER} --create --if-not-exists --topic ${KAFKA_TOPIC_ML_ANSWER_NAME} --partitions ${KAFKA_TOPIC_ML_ANSWER_PARTITIONS} --replication-factor ${KAFKA_TOPIC_ML_ANSWER_REPLICATION_FACTOR};
+      echo 'Topics created.
       "
 
   kafka-ui:
